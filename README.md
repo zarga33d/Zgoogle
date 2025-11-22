@@ -1,3 +1,7 @@
+<div align="center">
+  <img src="https://i.imgur.com/3mlHQfU.png" alt="Zgoogle Logo" width="180">
+</div>
+
 <h1 align="center">🛡️ Zgoogle – Google Phishing Simulation Page 🎭</h1>
 
 <p align="center">
